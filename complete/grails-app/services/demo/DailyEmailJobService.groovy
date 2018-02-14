@@ -9,11 +9,17 @@ import org.springframework.scheduling.annotation.Scheduled
 @Slf4j
 class DailyEmailJobService  {
 
-    EmailService emailService // <1>
+    private static final String sec = 5
+    private static final String CRON = "0 30 4 1/1 * ? *"
+    private static final String TESTCRON = "*/5 * * * * ?"
 
-    @Scheduled  // TODO cron "0 30 4 1/1 * ? *"
+    boolean lazyInit = false // <1>
+
+    EmailService emailService // <2>
+
+    @Scheduled(cron = "*/5 * * * * ?") //<4>
     void execute() {
-        emailService.send('john.doe@example.com') // <2>
+        emailService.send('john.doe@example.com') // <3>
     }
 }
 //end::dailyEmailJobService[]

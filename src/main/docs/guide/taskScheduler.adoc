@@ -1,0 +1,15 @@
+Create the following bean
+
+[source, groovy]
+.src/main/groovy/demo/ThreadPoolTaskSchedulerBean.groovy
+----
+include::{sourceDir}/src/main/groovy/demo/ThreadPoolTaskSchedulerBean.groovy[]
+----
+
+Make your new bean work with standard Grails dependency injection
+
+[source, groovy]
+.grails-app/conf/spring/resources.groovy
+----
+include::{sourceDir}/grails-app/conf/spring/resources.groovy[]
+----

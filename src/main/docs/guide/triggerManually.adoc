@@ -19,9 +19,9 @@ Create `RegisterService.groovy`
 include::{sourceDir}/grails-app/services/demo/RegisterService.groovy[]
 ----
 
-<1> This method returns a date one minute into the future
-<2> We can find the necessary `Jobkey` with the JobService's simpleName
-<3> We can pass data into a Job execution.
+<1> Dependency injection of our TaskScheduler bean
+<2> Dependency injection of emailService
+<3> This method returns a date one minute into the future
 <4> Schedule the trigger
 
 
@@ -29,9 +29,9 @@ Create `FollowupEmailJobService.groovy`
 
 
 [source, groovy]
-.grails-app/services/demo/FollowupEmailJobService.groovy
+.grails-app/tasks/demo/FollowupTask.groovy
 ----
-include::{sourceDir}/grails-app/services/demo/FollowupEmailJobService.groovy[]
+include::{sourceDir}/grails-app/tasks/demo/FollowupTask.groovy[]
 ----
 
 <1> Extract the job data 

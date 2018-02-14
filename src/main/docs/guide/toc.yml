@@ -4,11 +4,12 @@ gettingStarted:
   title: Getting Started
   howto: How to complete the guide
 writing:
-  title: Writing the Guide
-  install: Installing the plugin
+  title: Writing Schedules
   logchanges: Set log level INFO for package demo
   createSimpleJob: Creating a simple Job
   logicInService: Business logic in Services
+  taskScheduler: Task Scheduler Bean
+  logicInServiceTwo: Business logic Cron as TaskSchedule
   triggerManually: Scheduling a Job with data manually 
   concurrentExecution: Concurrent Job execution
   summary: Summary

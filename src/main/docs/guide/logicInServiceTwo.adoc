@@ -1,0 +1,7 @@
+The previous cron configuration can be written as:
+
+[source, groovy]
+.grails-app/services/demo/todayat/DailyEmailJobService.groovy
+----
+include::{sourceDir}/grails-app/services/demo/todayat/DailyEmailJobService.groovy[tag=dailyEmailJobService]
+----
