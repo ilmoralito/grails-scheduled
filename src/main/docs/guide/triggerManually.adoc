@@ -10,6 +10,15 @@ Modify `BootStrap.groovy` to call twice a new service named `RegisterService`.
 include::{sourceDir}/grails-app/init/demo/BootStrap.groovy[]
 ----
 
+Create `FollowupTask.groovy`
+
+
+[source, groovy]
+.grails-app/tasks/demo/FollowupTask.groovy
+----
+include::{sourceDir}/grails-app/tasks/demo/FollowupTask.groovy[]
+----
+
 Create `RegisterService.groovy`
 
 
@@ -23,18 +32,6 @@ include::{sourceDir}/grails-app/services/demo/RegisterService.groovy[]
 <2> Dependency injection of emailService
 <3> This method returns a date one minute into the future
 <4> Schedule the trigger
-
-
-Create `FollowupEmailJobService.groovy`
-
-
-[source, groovy]
-.grails-app/tasks/demo/FollowupTask.groovy
-----
-include::{sourceDir}/grails-app/tasks/demo/FollowupTask.groovy[]
-----
-
-<1> Extract the job data 
 
 If you execute the above code you will see the Job being executed one minute after we schedule it and with the supplied email address.
 

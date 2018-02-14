@@ -3,4 +3,9 @@ a few times a week,... In the Java world we have been using the _Quartz_ library
 
 In this guide you will learn how to use the
 https://docs.spring.io/autorepo/docs/spring-framework/3.2.x/spring-framework-reference/html/scheduling.html[Spring Task Execution and Scheduling] to
-schedule periodic tasks inside a Grails application
+schedule periodic tasks inside a Grails application.
+
+For additional documentation see:
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/annotation/Scheduled.html[@Scheduled]
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/TaskScheduler.html[TaskScheduler]
+https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/scheduling/support/PeriodicTrigger.html[PeriodicTrigger]

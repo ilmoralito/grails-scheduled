@@ -34,7 +34,7 @@ include::{sourceDir}/grails-app/services/demo/HelloWorldJobService.groovy[]
 <1> Remove `@Transactional` as this service does not require transactions. Add `@CompileStatic` for performance and `@Slf4j` for logging
 <2> Force service to initialize, Without forcing the service to be initialized the jobs will not execute
 <3> Create trigger every 10 seconds
-<3> Create another trigger every 45 seconds with an initial delay of 5 seconds (5000 millis)
+<4> Create another trigger every 45 seconds with an initial delay of 5 seconds (5000 millis)
 
 Now start the application:
 

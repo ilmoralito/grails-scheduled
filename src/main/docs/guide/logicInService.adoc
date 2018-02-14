@@ -17,8 +17,8 @@ include::{sourceDir}/grails-app/services/demo/DailyEmailJobService.groovy[tag=da
 ----
 <1> Force service to initialize, without forcing the service to be initialized the jobs will not execute
 <2> Inject the service
-<2> Call it
-<3> Trigger the job once a day at 04:30 AM
+<3> Call it
+<4> Trigger the job once a day at 04:30 AM
 
 
 Cron notation is often confusing. To have more advanced control over job execution it is possible to implement a TaskScheduler.

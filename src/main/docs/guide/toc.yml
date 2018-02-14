@@ -9,9 +9,10 @@ writing:
   createSimpleJob: Creating a simple Job
   logicInService: Business logic in Services
   taskScheduler: Task Scheduler Bean
-  logicInServiceTwo: Business logic Cron as TaskSchedule
+  runnableTasks: Runnable Tasks
+  logicInServiceTwo: Business logic Cron as TaskSchedule TODO
   triggerManually: Scheduling a Job with data manually 
-  concurrentExecution: Concurrent Job execution
+  concurrentExecution: Concurrent Job execution TODO
   summary: Summary
 helpWithGrails:
   title: Help with Grails  

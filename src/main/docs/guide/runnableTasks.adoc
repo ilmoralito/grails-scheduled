@@ -1,0 +1,12 @@
+Create the following task
+
+[source, groovy]
+.grails-app/tasks/demo/EmailTask.groovy
+----
+include::{sourceDir}/grails-app/tasks/demo/EmailTask.groovy[]
+----
+<1> Implement `Runnable`
+<2> Store incoming email address for later use
+<3> Store incoming service
+<4> Task constructor: set email and service
+<5> Run the task
