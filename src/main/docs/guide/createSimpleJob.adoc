@@ -59,3 +59,7 @@ Simple Job every 10 seconds :14/2/2018 02:07:35
 <2> The 45 seconds job just starts 5 seconds after the app starts. See `startDelay` in the trigger configuration.
 <3> Second execution of 10 seconds job just 10 seconds after the first execution
 <4> Second execution of 45 seconds job just 45 seconds after the first execution
+
+WARNING: When using `@Scheduled`, `boolean lazyInit = false` is required or your schedule will not run.
+
+NOTE: `@Scheduled` requires the use of CONSTANT values. Meaning that attempting to generate / build values for `fixedDelay`, `initialDelay`, `cron`, ect. will not work and cause compile errors.

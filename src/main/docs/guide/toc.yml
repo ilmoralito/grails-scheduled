@@ -12,7 +12,6 @@ writing:
   runnableTasks: Runnable Tasks
   triggerManually: Scheduling a Job manually
   logicInServiceTwo: Simplified Cron with TaskSchedule
-  concurrentExecution: Concurrent Job execution TODO
   summary: Summary
 helpWithGrails:
   title: Help with Grails  

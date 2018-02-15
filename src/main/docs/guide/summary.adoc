@@ -1,3 +1,6 @@
-During this guide, we learned how to configure Jobs manually, with cron statements, with the plugin fluid API. Moreover, we learned how to disable concurrent execution or pass Job Data.
+During this guide, we learned how to configure Jobs using the `@Scheduled` annotation using fixedDelay, initialDelay,
+and cron as well as manually configuring jobs with a TaskScheduler and tasks. Moreover, we learned that
+default configuration for `@Scheduled` or the TaskScheduler prevents concurrent execution.
 
-Please, refer to the http://blog.agileorbit.com/grails-schwartz/latest/index.html[Grails Schwartz plugin's documentation] to learn more. 
+For more information review the
+https://docs.spring.io/spring/docs/current/spring-framework-reference/integration.html#scheduling[Spring Task Execution and Scheduling documentation] to learn more.
