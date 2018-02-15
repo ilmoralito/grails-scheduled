@@ -4,6 +4,7 @@ import groovy.time.TimeCategory
 import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
 import groovy.util.logging.Slf4j
+import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler
 
 import java.text.SimpleDateFormat
 
@@ -11,12 +12,12 @@ import java.text.SimpleDateFormat
 @CompileStatic
 class RegisterService {
 
-	ThreadPoolTaskSchedulerBean threadPoolTaskScheduler // <1>
+	ThreadPoolTaskScheduler threadPoolTaskScheduler // <1>
 	EmailService emailService // <2>
 
-	void register(String email) {
+	void register(String email, String message) {
 		log.info 'saving {} at {}', email, new SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(new Date())
-		scheduleFollowupEmail(email)
+		scheduleFollowupEmail(email, message)
 	}
 
 	@CompileDynamic
@@ -28,7 +29,7 @@ class RegisterService {
 		startAt
 	}
 
-	void scheduleFollowupEmail(String email) {
+	void scheduleFollowupEmail(String email, String message) {
 //		JobDataMap jobDataMap = new JobDataMap()
 //		jobDataMap.put('email', email)
 //		Trigger trigger = TriggerBuilder.newTrigger()
@@ -39,7 +40,6 @@ class RegisterService {
 //		quartzService.scheduleTrigger(trigger)
 
 		threadPoolTaskScheduler
-				.threadPoolTaskScheduler()
-				.schedule(new FollowupTask(emailService, email), startAtDate()) // <4>
+				.schedule(new EmailTask(emailService, email, message), startAtDate()) // <4>
 	}
 }

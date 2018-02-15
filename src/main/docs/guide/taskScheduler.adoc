@@ -1,3 +1,5 @@
+To get started using more advance scheduling techniques first we need to create and register a TaskScheduler bean.
+
 Create the following bean
 
 [source, groovy]
@@ -5,6 +7,8 @@ Create the following bean
 ----
 include::{sourceDir}/src/main/groovy/demo/ThreadPoolTaskSchedulerBean.groovy[]
 ----
+<1> ThreadPoolTaskScheduler can execute tasks asynchronously based on the number of threads configured
+<2> All related threads will be prefixed with ThreadPoolTaskScheduler
 
 Make your new bean work with standard Grails dependency injection
 

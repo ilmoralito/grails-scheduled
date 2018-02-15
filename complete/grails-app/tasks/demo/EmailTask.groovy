@@ -3,15 +3,17 @@ package demo
 class EmailTask implements Runnable { //<1>
 
     String email //<2>
-    EmailService emailService //<3>
+    String message //<3>
+    EmailService emailService //<4>
 
-    EmailTask(EmailService emailService, String email) { //<4>
+    EmailTask(EmailService emailService, String email, String message) { //<5>
         this.emailService = emailService
         this.email = email
+        this.message = message
     }
 
     @Override
-    void run() { //<5>
-        emailService.send(email)
+    void run() { //<6>
+        emailService.send(email, message)
     }
 }

@@ -7,7 +7,7 @@ Since scheduling is native functionality. Just execute:
 
 This will create the file `grails-app/services/demo/HelloWorldJobService.groovy` with a empty template method.
 
-The very basic skeleton of a Schwartz Job is:
+The very basic skeleton is:
 
 [source, groovy]
 .grails-app/services/demo/HelloWorldJobService.groovy

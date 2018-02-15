@@ -10,8 +10,8 @@ writing:
   logicInService: Business logic in Services
   taskScheduler: Task Scheduler Bean
   runnableTasks: Runnable Tasks
-  logicInServiceTwo: Business logic Cron as TaskSchedule TODO
-  triggerManually: Scheduling a Job with data manually 
+  triggerManually: Scheduling a Job manually
+  logicInServiceTwo: Simplified Cron with TaskSchedule
   concurrentExecution: Concurrent Job execution TODO
   summary: Summary
 helpWithGrails:

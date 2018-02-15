@@ -21,4 +21,5 @@ include::{sourceDir}/grails-app/services/demo/DailyEmailJobService.groovy[tag=da
 <4> Trigger the job once a day at 04:30 AM
 
 
-Cron notation is often confusing. To have more advanced control over job execution it is possible to implement a TaskScheduler.
+Cron notation is often confusing so assist in having clear logic and to make more advanced scheduling easier next we will
+tae a look at job execution using a TaskScheduler.

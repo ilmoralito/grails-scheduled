@@ -7,16 +7,23 @@ Modify `BootStrap.groovy` to call twice a new service named `RegisterService`.
 [source, groovy]
 .grails-app/init/demo/BootStrap.groovy
 ----
-include::{sourceDir}/grails-app/init/demo/BootStrap.groovy[]
-----
+package demo
 
-Create `FollowupTask.groovy`
+import groovy.transform.CompileStatic
 
+@CompileStatic
+class BootStrap {
 
-[source, groovy]
-.grails-app/tasks/demo/FollowupTask.groovy
-----
-include::{sourceDir}/grails-app/tasks/demo/FollowupTask.groovy[]
+	RegisterService registerService
+
+    def init = { servletContext ->
+    	registerService.register('harry@howards.com')
+    	sleep(20_000)
+    	registerService.register('ron@howards.com')
+    }
+    def destroy = {
+    }
+}
 ----
 
 Create `RegisterService.groovy`
@@ -39,7 +46,7 @@ If you execute the above code you will see the Job being executed one minute aft
 ----
 INFO demo.RegisterService         : saving harry@howards.com at 23/1/2018 07:55:21
 INFO demo.RegisterService         : saving ron@howards.com at 23/1/2018 07:55:41
-INFO demo.FollowupEmailJobService : Sending followup email to: harry@howards.com at 23/1/2018 07:56:21
-INFO demo.FollowupEmailJobService : Sending followup email to: ron@howards.com at 23/1/2018 07:56:41
+INFO demo.EmailService            : Sending email to harry@howards.com : Follow up - How was your experience at 23/1/2018 07:56:21
+INFO demo.EmailService            : Sending email to ron@howards.com : Follow up - How was your experience at 23/1/2018 07:56:41
 ----
  
