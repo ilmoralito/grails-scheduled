@@ -11,5 +11,5 @@ include::{sourceDir}/grails-app/tasks/demo/EmailTask.groovy[]
 <2> Store incoming email address for later use
 <3> Store incoming message
 <4> Store incoming service
-<5> Task constructor: set email and service
+<5> Task constructor: set `email`, `message and service
 <6> Run the task
