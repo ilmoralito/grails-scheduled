@@ -4,9 +4,11 @@ package demo.todayat
 import demo.EmailService
 import demo.EmailTask
 import groovy.transform.CompileStatic
+import groovy.util.logging.Slf4j
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler
 import java.time.Duration
 
+@Slf4j
 @CompileStatic
 class DailyMailJobService {
     private final int HOUR = 4

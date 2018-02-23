@@ -4,3 +4,4 @@ default configuration for `@Scheduled` or the TaskScheduler prevents concurrent 
 
 For more information review the
 https://docs.spring.io/spring/docs/current/spring-framework-reference/integration.html#scheduling[Spring Task Execution and Scheduling documentation] to learn more.
+

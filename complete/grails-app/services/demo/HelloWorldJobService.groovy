@@ -6,8 +6,8 @@ import org.springframework.scheduling.annotation.Scheduled
 
 import java.text.SimpleDateFormat
 
-@CompileStatic  //<1>
 @Slf4j
+@CompileStatic  //<1>
 class HelloWorldJobService {
 
     boolean lazyInit = false //<2>

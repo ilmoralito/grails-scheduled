@@ -1,9 +1,11 @@
 package demo
 
 import groovy.transform.CompileStatic
+import groovy.util.logging.Slf4j
 
 import java.text.SimpleDateFormat
 
+@Slf4j
 @CompileStatic
 class EmailService {
 
