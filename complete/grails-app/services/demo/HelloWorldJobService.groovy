@@ -6,18 +6,18 @@ import org.springframework.scheduling.annotation.Scheduled
 
 import java.text.SimpleDateFormat
 
-@Slf4j
-@CompileStatic  //<1>
+@Slf4j //<1>
+@CompileStatic //<2>
 class HelloWorldJobService {
 
-    boolean lazyInit = false //<2>
+    boolean lazyInit = false //<3>
 
-    @Scheduled(fixedDelay = 10000L) //<3>
+    @Scheduled(fixedDelay = 10000L) //<4>
     void executeEveryTen() {
         log.info "Simple Job every 10 seconds :{}", new SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(new Date())
     }
 
-    @Scheduled(fixedDelay = 45000L, initialDelay = 5000L) //<4>
+    @Scheduled(fixedDelay = 45000L, initialDelay = 5000L) //<5>
     void executeEveryFourtyFive() {
         log.info "Simple Job every 45 seconds :{}", new SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(new Date())
     }
